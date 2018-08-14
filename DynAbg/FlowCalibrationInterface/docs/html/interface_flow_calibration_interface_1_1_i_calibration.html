@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>FlowCalibrationInterface: FlowCalibrationInterface.ICalibration Schnittstellenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Erzeugt von Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">FlowCalibrationInterface&#160;<span id="projectnumber">1.0.0</span></div>
+  </td>
+  <td>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('interface_flow_calibration_interface_1_1_i_calibration.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#properties">Propertys</a> &#124;
+<a href="#events">Ereignisse</a>  </div>
+  <div class="headertitle">
+<div class="title">FlowCalibrationInterface.ICalibration Schnittstellenreferenz</div>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="FlowCalibrationInterface::ICalibration" -->
+<p>Schnittstelle zum hydraulischen Abgleich.  
+ <a href="interface_flow_calibration_interface_1_1_i_calibration.html#details">Mehr ...</a></p>
+
+<p><a href="interface_flow_calibration_interface_1_1_i_calibration-members.html">Aufstellung aller Elemente</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a79b5810eb116c53d7789b26c150d6072">init</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sucht und initialisiert den EnOcean-Empfänger.  <a href="#a79b5810eb116c53d7789b26c150d6072"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a141da5ba9db50486ceb7b4494a553a04">close</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Beendet die Kommunikation mit dem EnOcean-Empfänger und gibt die Ressourcen frei.  <a href="#a141da5ba9db50486ceb7b4494a553a04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8">anlernen</a> (int timeout)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein neues Objekt mit der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a> anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.  <a href="#a0c410462feff52dafa7cb19475e9d4f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#afa1aa825d295b2c234171a199e5154ad">getTCMID</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fragt die ID des EnOcean-Empfängers ab.  <a href="#afa1aa825d295b2c234171a199e5154ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a58dbcf43b8fd28139e84e414af006989">deactivateValve</a> (<a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> valve)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deaktiviert ein angelerntes Ventil.  <a href="#a58dbcf43b8fd28139e84e414af006989"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a152e93438e103d82f63f0b29f890efdb">openValve</a> (<a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> valve)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Öffnet das Ventil zu 100 %.  <a href="#a152e93438e103d82f63f0b29f890efdb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a8bd98c3c184d4b21cc5e0e5483f2984e">closeValve</a> (<a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> valve)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Schließt das Ventil.  <a href="#a8bd98c3c184d4b21cc5e0e5483f2984e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a847b08c582a92cbc507bf54b23832891">start</a> (IVSMCommunication communication, List&lt; <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> &gt; valves, int timeout)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Führt den hydraulischen Abgleich durch.  <a href="#a847b08c582a92cbc507bf54b23832891"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a925f647b618c403940a2ca484d7ea5ea">start</a> (IVSMCommunication communication, List&lt; <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> &gt; valves)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Führt den hydraulischen Abgleich durch.  <a href="#a925f647b618c403940a2ca484d7ea5ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a6f350b0442754d006b01d4fe3d8bb757">stop</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stoppt den hydraulischen Abgleich.  <a href="#a6f350b0442754d006b01d4fe3d8bb757"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="properties"></a>
+Propertys</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a096a2315fcab079e28e73aaf47adae91">Initialized</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft gibt an, ob der EnOcean-Empfänger initialisiert ist.  <a href="#a096a2315fcab079e28e73aaf47adae91"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+Ereignisse</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">CalibrationEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#ad5ea392663b74bd25bb90ef06d65ffe7">calibrationStateChanged</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Ereignis welches auftritt, wenn sich der Fortschritt oder der Status des hydraulischen Abgleichs ändert.  <a href="#ad5ea392663b74bd25bb90ef06d65ffe7"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Schnittstelle zum hydraulischen Abgleich. </p>
+</div><hr/><h2>Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a0c410462feff52dafa7cb19475e9d4f8"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::anlernen" ref="a0c410462feff52dafa7cb19475e9d4f8" args="(int timeout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> FlowCalibrationInterface.ICalibration.anlernen </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Erzeugt ein neues Objekt mit der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a> anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Die Zeit in Millisekunden in der nach einem Anlerntelegramm eines Ventils gesucht wird.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Ein <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a> Objekt mit der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a>. </dd></dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>NOT_INITIALIZED:</em><br/>
+ Der EnOcean-Empfänger wurde nicht initialisiert.<br/>
+<br/>
+ <em>NO_LEARN_MESSAGE:</em><br/>
+ In der Angegebenen Zeit wurde kein Anlerntelegramm empfangen.<br/>
+<br/>
+ <em>VALVE_ALREADY_LEARNED:</em><br/>
+ Es wurde versucht ein Ventil anzulernen, welches bereits angelernt wurde.<br/>
+<br/>
+ <em>NO_FREE_IDS:</em><br/>
+ Es sind bereits 128 Ventile angelernt. Weitere Ventile können nicht angelernt werden.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a141da5ba9db50486ceb7b4494a553a04"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::close" ref="a141da5ba9db50486ceb7b4494a553a04" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Beendet die Kommunikation mit dem EnOcean-Empfänger und gibt die Ressourcen frei. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8bd98c3c184d4b21cc5e0e5483f2984e"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::closeValve" ref="a8bd98c3c184d4b21cc5e0e5483f2984e" args="(IValve valve)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.closeValve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a>&#160;</td>
+          <td class="paramname"><em>valve</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Schließt das Ventil. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valve</td><td>Ein Objekt mit Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>UNKNOWN_VALVE_OBJECT:</em><br/>
+ Es wurde ein Ventilobjekt übergeben, welches nicht mit der Methode <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8" title="Erzeugt ein neues Objekt mit der Schnittstelle IValve anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.">anlernen()</a> der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html" title="Schnittstelle zum hydraulischen Abgleich.">ICalibration</a> erzeugt wurde.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a58dbcf43b8fd28139e84e414af006989"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::deactivateValve" ref="a58dbcf43b8fd28139e84e414af006989" args="(IValve valve)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.deactivateValve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a>&#160;</td>
+          <td class="paramname"><em>valve</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deaktiviert ein angelerntes Ventil. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valve</td><td>Ein Objekt mit Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>UNKNOWN_VALVE_OBJECT:</em><br/>
+ Es wurde ein Ventilobjekt übergeben, welches nicht mit der Methode <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8" title="Erzeugt ein neues Objekt mit der Schnittstelle IValve anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.">anlernen()</a> der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html" title="Schnittstelle zum hydraulischen Abgleich.">ICalibration</a> erzeugt wurde.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afa1aa825d295b2c234171a199e5154ad"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::getTCMID" ref="afa1aa825d295b2c234171a199e5154ad" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long FlowCalibrationInterface.ICalibration.getTCMID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Fragt die ID des EnOcean-Empfängers ab. </p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Die ID des EnOcean-Empfängers. </dd></dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>NOT_INITIALIZED:</em><br/>
+ Der EnOcean-Empfänger wurde nicht initialisiert.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a79b5810eb116c53d7789b26c150d6072"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::init" ref="a79b5810eb116c53d7789b26c150d6072" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sucht und initialisiert den EnOcean-Empfänger. </p>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>NO_TCM_FOUND:</em><br/>
+ Der EnOcean-Empfänger ist nicht angeschlossen oder kann nicht angesprochen werden.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a152e93438e103d82f63f0b29f890efdb"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::openValve" ref="a152e93438e103d82f63f0b29f890efdb" args="(IValve valve)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.openValve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a>&#160;</td>
+          <td class="paramname"><em>valve</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Öffnet das Ventil zu 100 %. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valve</td><td>Ein Objekt mit Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html" title="Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil ...">IValve</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>UNKNOWN_VALVE_OBJECT:</em><br/>
+ Es wurde ein Ventilobjekt übergeben, welches nicht mit der Methode <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8" title="Erzeugt ein neues Objekt mit der Schnittstelle IValve anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.">anlernen()</a> der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html" title="Schnittstelle zum hydraulischen Abgleich.">ICalibration</a> erzeugt wurde.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a925f647b618c403940a2ca484d7ea5ea"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::start" ref="a925f647b618c403940a2ca484d7ea5ea" args="(IVSMCommunication communication, List&lt; IValve &gt; valves)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.start </td>
+          <td>(</td>
+          <td class="paramtype">IVSMCommunication&#160;</td>
+          <td class="paramname"><em>communication</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> &gt;&#160;</td>
+          <td class="paramname"><em>valves</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Führt den hydraulischen Abgleich durch. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">communication</td><td>Eine Schnittstelle womit der Differenzdruck und der Volumenstrom abgefragt werden kann.</td></tr>
+    <tr><td class="paramname">valves</td><td>Eine Liste mit Ventilen mit denen der Abgleich durchgeführt werden soll.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>UNKNOWN_VALVE_OBJECT:</em><br/>
+ Es wurde ein Ventilobjekt übergeben, welches nicht mit der Methode <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8" title="Erzeugt ein neues Objekt mit der Schnittstelle IValve anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.">anlernen()</a> der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html" title="Schnittstelle zum hydraulischen Abgleich.">ICalibration</a> erzeugt wurde.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a847b08c582a92cbc507bf54b23832891"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::start" ref="a847b08c582a92cbc507bf54b23832891" args="(IVSMCommunication communication, List&lt; IValve &gt; valves, int timeout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.start </td>
+          <td>(</td>
+          <td class="paramtype">IVSMCommunication&#160;</td>
+          <td class="paramname"><em>communication</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a> &gt;&#160;</td>
+          <td class="paramname"><em>valves</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Führt den hydraulischen Abgleich durch. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">communication</td><td>Eine Schnittstelle womit der Differenzdruck und der Volumenstrom abgefragt werden kann.</td></tr>
+    <tr><td class="paramname">valves</td><td>Eine Liste mit Ventilen mit denen der Abgleich durchgeführt werden soll.</td></tr>
+    <tr><td class="paramname">timeout</td><td>Die miximale Zeit in Millisekunden in der die Ventile auf-/zugefahren sein müssen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Ausnahmebehandlung:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_flow_calibration_interface_1_1_calibration_exception.html" title="Diese Klasse beschreibt Fehler im Zusammenhang mit den Klassen und Methoden aus der Bibliothek FlowCa...">CalibrationException</a></td><td><b><a class="el" href="namespace_flow_calibration_interface.html#af8a5b6c28ca0b08a7713d2dcf057c643" title="Aufzählungen von Fehlertypen.">Error</a>-Codes</b><br/>
+<br/>
+ <em>UNKNOWN_VALVE_OBJECT:</em><br/>
+ Es wurde ein Ventilobjekt übergeben, welches nicht mit der Methode <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html#a0c410462feff52dafa7cb19475e9d4f8" title="Erzeugt ein neues Objekt mit der Schnittstelle IValve anhand eines empfangenen Anlerntelegramms. Dieses Ventil wird intern automatisch aktiviert und muss beim Löschen deaktiviert werden.">anlernen()</a> der Schnittstelle <a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html" title="Schnittstelle zum hydraulischen Abgleich.">ICalibration</a> erzeugt wurde.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f350b0442754d006b01d4fe3d8bb757"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::stop" ref="a6f350b0442754d006b01d4fe3d8bb757" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowCalibrationInterface.ICalibration.stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Stoppt den hydraulischen Abgleich. </p>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="a096a2315fcab079e28e73aaf47adae91"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::Initialized" ref="a096a2315fcab079e28e73aaf47adae91" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FlowCalibrationInterface.ICalibration.Initialized<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft gibt an, ob der EnOcean-Empfänger initialisiert ist. </p>
+
+</div>
+</div>
+<hr/><h2>Ereignisdokumentation</h2>
+<a class="anchor" id="ad5ea392663b74bd25bb90ef06d65ffe7"></a><!-- doxytag: member="FlowCalibrationInterface::ICalibration::calibrationStateChanged" ref="ad5ea392663b74bd25bb90ef06d65ffe7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CalibrationEventHandler FlowCalibrationInterface.ICalibration.calibrationStateChanged</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ein Ereignis welches auftritt, wenn sich der Fortschritt oder der Status des hydraulischen Abgleichs ändert. </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="namespace_flow_calibration_interface.html">FlowCalibrationInterface</a>      </li>
+      <li class="navelem"><a class="el" href="interface_flow_calibration_interface_1_1_i_calibration.html">ICalibration</a>      </li>
+      <li class="footer">Erzeugt am Thu Jul 7 2011 08:20:54 für FlowCalibrationInterface von&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Ereignisse</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

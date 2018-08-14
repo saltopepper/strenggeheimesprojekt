@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using FlowCalibrationInterface;
+
+namespace FlowCalibration
+{
+	public class CalibrationFactory
+	{
+		internal static Calibration calibration;
+
+		public static ICalibration getInstance()
+		{
+			if (calibration == null)
+				calibration = new Calibration();
+
+			return calibration;
+		}
+	}
+}

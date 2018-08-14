@@ -1,0 +1,1193 @@
+_
+<?xml version="1.0" encoding="utf-8"?>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 129: declaration expected, identifier 'xml' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 129: declaration expected, identifier 'version' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 129: declaration expected, identifier 'encoding' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  1 
+    Error 10: Expecting identifier or other declarator
+         _
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 129: declaration expected, identifier 'ToolsVersion' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 129: declaration expected, identifier 'DefaultTargets' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 129: declaration expected, identifier 'xmlns' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  2 
+    Error 10: Expecting identifier or other declarator
+                _
+  <PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  3 
+    Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  3 
+    Error 10: Expecting identifier or other declarator
+                   _
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 129: declaration expected, identifier 'Configuration' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 129: declaration expected, identifier 'Condition' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 40: Undeclared identifier 'Debug'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 129: declaration expected, identifier 'Configuration' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  4 
+    Error 10: Expecting identifier or other declarator
+              _
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 129: declaration expected, identifier 'Platform' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 129: declaration expected, identifier 'Condition' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 40: Undeclared identifier 'AnyCPU'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 129: declaration expected, identifier 'Platform' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  5 
+    Error 10: Expecting identifier or other declarator
+                   _
+    <ProductVersion>8.0.30703</ProductVersion>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  6 
+    Error 129: declaration expected, identifier 'ProductVersion' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  6 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  6 
+    Error 129: declaration expected, identifier 'ProductVersion' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  6 
+    Error 10: Expecting identifier or other declarator
+                  _
+    <SchemaVersion>2.0</SchemaVersion>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  7 
+    Error 129: declaration expected, identifier 'SchemaVersion' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  7 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  7 
+    Error 129: declaration expected, identifier 'SchemaVersion' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  7 
+    Error 10: Expecting identifier or other declarator
+                _
+    <ProjectGuid>{73675A87-B2B3-4B12-B03B-1F9D485F5BFD}</ProjectGuid>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  8 
+    Error 129: declaration expected, identifier 'ProjectGuid' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  8 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  8 
+    Error 129: declaration expected, identifier 'ProjectGuid' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  8 
+    Error 10: Expecting identifier or other declarator
+               _
+    <OutputType>Library</OutputType>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 129: declaration expected, identifier 'OutputType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 40: Undeclared identifier 'Library'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 129: declaration expected, identifier 'OutputType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj  9 
+    Error 10: Expecting identifier or other declarator
+                      _
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 129: declaration expected, identifier 'AppDesignerFolder' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 40: Undeclared identifier 'Properties'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 129: declaration expected, identifier 'AppDesignerFolder' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    10  Error 10: Expecting identifier or other declarator
+                  _
+    <RootNamespace>FlowCalibration</RootNamespace>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 129: declaration expected, identifier 'RootNamespace' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 40: Undeclared identifier 'FlowCalibration'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 129: declaration expected, identifier 'RootNamespace' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    11  Error 10: Expecting identifier or other declarator
+                 _
+    <AssemblyName>FlowCalibration</AssemblyName>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 129: declaration expected, identifier 'AssemblyName' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 40: Undeclared identifier 'FlowCalibration'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 129: declaration expected, identifier 'AssemblyName' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    12  Error 10: Expecting identifier or other declarator
+                           _
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 129: declaration expected, identifier 'TargetFrameworkVersion'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 129: declaration expected, identifier 'v4' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 129: declaration expected, identifier 'TargetFrameworkVersion'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    13  Error 10: Expecting identifier or other declarator
+                  _
+    <FileAlignment>512</FileAlignment>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    14  Error 129: declaration expected, identifier 'FileAlignment' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    14  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    14  Error 129: declaration expected, identifier 'FileAlignment' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    14  Error 10: Expecting identifier or other declarator
+                            _
+    <TargetFrameworkProfile />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    15  Error 129: declaration expected, identifier 'TargetFrameworkProfile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    15  Error 10: Expecting identifier or other declarator
+                   _
+    <SccProjectName>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    16  Error 129: declaration expected, identifier 'SccProjectName' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    16  Error 10: Expecting identifier or other declarator
+                    _
+    </SccProjectName>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    17  Error 129: declaration expected, identifier 'SccProjectName' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    17  Error 10: Expecting identifier or other declarator
+                 _
+    <SccLocalPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    18  Error 129: declaration expected, identifier 'SccLocalPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    18  Error 10: Expecting identifier or other declarator
+                  _
+    </SccLocalPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    19  Error 129: declaration expected, identifier 'SccLocalPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    19  Error 10: Expecting identifier or other declarator
+               _
+    <SccAuxPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    20  Error 129: declaration expected, identifier 'SccAuxPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    20  Error 10: Expecting identifier or other declarator
+                _
+    </SccAuxPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    21  Error 129: declaration expected, identifier 'SccAuxPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    21  Error 10: Expecting identifier or other declarator
+                _
+    <SccProvider>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    22  Error 129: declaration expected, identifier 'SccProvider' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    22  Error 10: Expecting identifier or other declarator
+                 _
+    </SccProvider>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    23  Error 129: declaration expected, identifier 'SccProvider' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    23  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    24  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    24  Error 10: Expecting identifier or other declarator
+                 _
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    25  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    25  Error 129: declaration expected, identifier 'Condition' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    25  Error 10: Expecting identifier or other declarator
+                 _
+    <DebugSymbols>true</DebugSymbols>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 129: declaration expected, identifier 'DebugSymbols' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 40: Undeclared identifier 'true'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 129: declaration expected, identifier 'DebugSymbols' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    26  Error 10: Expecting identifier or other declarator
+              _
+    <DebugType>full</DebugType>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 40: Undeclared identifier 'full'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    27  Error 10: Expecting identifier or other declarator
+             _
+    <Optimize>false</Optimize>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 129: declaration expected, identifier 'Optimize' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 40: Undeclared identifier 'false'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 129: declaration expected, identifier 'Optimize' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    28  Error 10: Expecting identifier or other declarator
+               _
+    <OutputPath>bin\Debug\</OutputPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 129: declaration expected, identifier 'bin' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 129: declaration expected, identifier 'Debug' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    29  Error 10: Expecting identifier or other declarator
+                    _
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 129: declaration expected, identifier 'DEBUG' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 19: Useless Declaration
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 40: Undeclared identifier 'TRACE'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    30  Error 10: Expecting identifier or other declarator
+                _
+    <ErrorReport>prompt</ErrorReport>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 40: Undeclared identifier 'prompt'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    31  Error 10: Expecting identifier or other declarator
+                 _
+    <WarningLevel>4</WarningLevel>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    32  Error 129: declaration expected, identifier 'WarningLevel' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    32  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    32  Error 129: declaration expected, identifier 'WarningLevel' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    32  Error 10: Expecting identifier or other declarator
+                      _
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 129: declaration expected, identifier 'AllowUnsafeBlocks' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 40: Undeclared identifier 'false'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 129: declaration expected, identifier 'AllowUnsafeBlocks' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    33  Error 10: Expecting identifier or other declarator
+                      _
+    <DocumentationFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    34  Error 129: declaration expected, identifier 'DocumentationFile' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    34  Error 10: Expecting identifier or other declarator
+                       _
+    </DocumentationFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    35  Error 129: declaration expected, identifier 'DocumentationFile' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    35  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    36  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    36  Error 10: Expecting identifier or other declarator
+                 _
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    37  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    37  Error 129: declaration expected, identifier 'Condition' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    37  Error 10: Expecting identifier or other declarator
+              _
+    <DebugType>pdbonly</DebugType>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 40: Undeclared identifier 'pdbonly'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    38  Error 10: Expecting identifier or other declarator
+             _
+    <Optimize>true</Optimize>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 129: declaration expected, identifier 'Optimize' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 40: Undeclared identifier 'true'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 129: declaration expected, identifier 'Optimize' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    39  Error 10: Expecting identifier or other declarator
+               _
+    <OutputPath>bin\Release\</OutputPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 129: declaration expected, identifier 'bin' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 129: declaration expected, identifier 'Release' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    40  Error 10: Expecting identifier or other declarator
+                    _
+    <DefineConstants>TRACE</DefineConstants>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 40: Undeclared identifier 'TRACE'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    41  Error 10: Expecting identifier or other declarator
+                _
+    <ErrorReport>prompt</ErrorReport>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 40: Undeclared identifier 'prompt'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    42  Error 10: Expecting identifier or other declarator
+                 _
+    <WarningLevel>4</WarningLevel>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    43  Error 129: declaration expected, identifier 'WarningLevel' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    43  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    43  Error 129: declaration expected, identifier 'WarningLevel' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    43  Error 10: Expecting identifier or other declarator
+                      _
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 129: declaration expected, identifier 'AllowUnsafeBlocks' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 40: Undeclared identifier 'false'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 129: declaration expected, identifier 'AllowUnsafeBlocks' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    44  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    45  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    45  Error 10: Expecting identifier or other declarator
+                _
+  <PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    46  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    46  Error 10: Expecting identifier or other declarator
+                 _
+    <SignAssembly>false</SignAssembly>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 129: declaration expected, identifier 'SignAssembly' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 40: Undeclared identifier 'false'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 129: declaration expected, identifier 'SignAssembly' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    47  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    48  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    48  Error 10: Expecting identifier or other declarator
+                _
+  <PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    49  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    49  Error 10: Expecting identifier or other declarator
+                              _
+    <AssemblyOriginatorKeyFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    50  Error 129: declaration expected, identifier 'AssemblyOriginatorKeyFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    50  Error 10: Expecting identifier or other declarator
+                               _
+    </AssemblyOriginatorKeyFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    51  Error 129: declaration expected, identifier 'AssemblyOriginatorKeyFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    51  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    52  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    52  Error 10: Expecting identifier or other declarator
+                _
+  <PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    53  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    53  Error 10: Expecting identifier or other declarator
+              _
+    <DelaySign>false</DelaySign>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 129: declaration expected, identifier 'DelaySign' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 40: Undeclared identifier 'false'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 129: declaration expected, identifier 'DelaySign' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    54  Error 10: Expecting identifier or other declarator
+                 _
+  </PropertyGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    55  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    55  Error 10: Expecting identifier or other declarator
+                 _
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug - Demo|AnyCPU' ">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    56  Error 129: declaration expected, identifier 'PropertyGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    56  Error 129: declaration expected, identifier 'Condition' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    56  Error 10: Expecting identifier or other declarator
+                 _
+    <DebugSymbols>true</DebugSymbols>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 129: declaration expected, identifier 'DebugSymbols' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 40: Undeclared identifier 'true'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 129: declaration expected, identifier 'DebugSymbols' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    57  Error 10: Expecting identifier or other declarator
+               _
+    <OutputPath>bin\Demo\</OutputPath>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 129: declaration expected, identifier 'bin' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 129: declaration expected, identifier 'Demo' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 129: declaration expected, identifier 'OutputPath' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    58  Error 10: Expecting identifier or other declarator
+                    _
+    <DefineConstants>TRACE;DEBUG;Demo</DefineConstants>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 129: declaration expected, identifier 'TRACE' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 19: Useless Declaration
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 129: declaration expected, identifier 'DEBUG' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 19: Useless Declaration
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 129: declaration expected, identifier 'Demo' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 129: declaration expected, identifier 'DefineConstants' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    59  Error 10: Expecting identifier or other declarator
+              _
+    <DebugType>full</DebugType>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 40: Undeclared identifier 'full'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 129: declaration expected, identifier 'DebugType' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    60  Error 10: Expecting identifier or other declarator
+                   _
+    <PlatformTarget>AnyCPU</PlatformTarget>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 129: declaration expected, identifier 'PlatformTarget' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 40: Undeclared identifier 'AnyCPU'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 129: declaration expected, identifier 'PlatformTarget' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    61  Error 10: Expecting identifier or other declarator
+                        _
+    <CodeAnalysisLogFile>bin\Debug\FlowCalibration.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'CodeAnalysisLogFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'bin' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'Debug' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'FlowCalibration' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'dll' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'CodeAnalysisLog' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'xml' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 129: declaration expected, identifier 'CodeAnalysisLogFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    62  Error 10: Expecting identifier or other declarator
+                                         _
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 129: declaration expected, identifier 'CodeAnalysisUseTypeNameInSuppression'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 40: Undeclared identifier 'true'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 129: declaration expected, identifier 'CodeAnalysisUseTypeNameInSuppression'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    63  Error 10: Expecting identifier or other declarator
+                                       _
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 129: declaration expected, identifier 'CodeAnalysisModuleSuppressionsFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 129: declaration expected, identifier 'GlobalSuppressions'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 40: Undeclared identifier 'cs'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 129: declaration expected, identifier 'CodeAnalysisModuleSuppressionsFile'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    64  Error 10: Expecting identifier or other declarator
+                _
+    <ErrorReport>prompt</ErrorReport>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 40: Undeclared identifier 'prompt'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 129: declaration expected, identifier 'ErrorReport' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    65  Error 10: Expecting identifier or other declarator
+                        _
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 129: declaration expected, identifier 'CodeAnalysisRuleSet'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 129: declaration expected, identifier 'MinimumRecommendedRules'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 40: Undeclared identifier 'ruleset'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 129: declaration expected, identifier 'CodeAnalysisRuleSet'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    66  Error 10: Expecting identifier or other declarator
+                                   _
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 129: declaration expected, identifier 'CodeAnalysisRuleSetDirectories'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 19: Useless Declaration
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 129: declaration expected, identifier 'C' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 129: declaration expected, identifier 'Program' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Info 745: function 'Files' has no explicit type or class, int assumed
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Info 832: Parameter 'x86' not explicitly declared, int assumed
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Error 10: Expecting '{'
+                                  _
+    <Compile Include="algorithmus\Algorithmus.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    97  Warning 606: Non-ANSI escape sequence: '\A'
+                                 _
+    <Compile Include="Properties\AssemblyInfo.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    103  Warning 606: Non-ANSI escape sequence: '\A'
+                            _
+    <Compile Include="valve\Valve.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    104  Warning 606: Non-ANSI escape sequence: '\V'
+                           _
+    <Compile Include="ftdi\FTD2XX.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    107  Warning 606: Non-ANSI escape sequence: '\F'
+                          _
+    <Compile Include="tcm\TCM.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    108  Warning 606: Non-ANSI escape sequence: '\T'
+                          _
+    <Compile Include="tcm\TCMMessage.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    109  Warning 606: Non-ANSI escape sequence: '\T'
+                          _
+    <Compile Include="tcm\TCMPacket.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    110  Warning 606: Non-ANSI escape sequence: '\T'
+                          _
+    <Compile Include="tcm\TCMEvent.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    111  Warning 606: Non-ANSI escape sequence: '\T'
+                            _
+    <Compile Include="tools\SerializableDictionary.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    112  Warning 606: Non-ANSI escape sequence: '\S'
+                            _
+    <Compile Include="tools\Tools.cs" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    113  Warning 606: Non-ANSI escape sequence: '\T'
+                                  _
+    <ProjectReference Include="..\FlowCalibrationInterface\FlowCalibrationInterface.csproj">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    116  Warning 606: Non-ANSI escape sequence: '\F'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    116  Warning 606: Non-ANSI escape sequence: '\F'
+                _
+      <Project>{D006CA31-E299-4B2B-938D-ED518B9EF99E}</Project>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 40: Undeclared identifier 'D006CA31'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 40: Undeclared identifier 'E299'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Info 834: Operator '-' followed by operator '-' is confusing.  Use
+    parentheses.
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Warning 522: Highest operation, operator '-', lacks side-effects
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 10: Expecting ';'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Warning 533: function 'Files()' should return a value (see line 67)
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Info 830: Location cited in prior message
+                                                    _
+      <Project>{D006CA31-E299-4B2B-938D-ED518B9EF99E}</Project>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Info 715: Symbol 'x86' (line 67) not referenced
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Info 830: Location cited in prior message
+                                                     _
+      <Project>{D006CA31-E299-4B2B-938D-ED518B9EF99E}</Project>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    117  Error 10: Expecting identifier or other declarator
+           _
+      <Name>FlowCalibrationInterface</Name>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 40: Undeclared identifier 'FlowCalibrationInterface'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    118  Error 10: Expecting identifier or other declarator
+                      _
+    </ProjectReference>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    119  Error 129: declaration expected, identifier 'ProjectReference' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    119  Error 10: Expecting identifier or other declarator
+                      _
+    <ProjectReference Include="..\vsmCommunicationInterface\vsmCommunicationInterface.csproj">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    120  Error 129: declaration expected, identifier 'ProjectReference' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    120  Error 129: declaration expected, identifier 'Include' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    120  Error 10: Expecting identifier or other declarator
+              _
+      <Project>{0E98D0B5-6C2E-4EC7-B3B4-46855899CDEC}</Project>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    121  Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    121  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    121  Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    121  Error 10: Expecting identifier or other declarator
+           _
+      <Name>vsmCommunicationInterface</Name>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 40: Undeclared identifier 'vsmCommunicationInterface'
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 129: declaration expected, identifier '__created' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    122  Error 10: Expecting identifier or other declarator
+                      _
+    </ProjectReference>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    123  Error 129: declaration expected, identifier 'ProjectReference' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    123  Error 10: Expecting identifier or other declarator
+             _
+  </ItemGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    124  Error 129: declaration expected, identifier 'ItemGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    124  Error 10: Expecting identifier or other declarator
+            _
+  <ItemGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    125  Error 129: declaration expected, identifier 'ItemGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    125  Error 10: Expecting identifier or other declarator
+                      _
+    <EmbeddedResource Include="Resources\ha_danfoss.tga" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    126  Error 129: declaration expected, identifier 'EmbeddedResource' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    126  Error 129: declaration expected, identifier 'Include' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    126  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    126  Warning 606: Non-ANSI escape sequence: '\h'
+                      _
+    <EmbeddedResource Include="Resources\ha_heimeier.tga" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    127  Error 129: declaration expected, identifier 'EmbeddedResource' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    127  Error 129: declaration expected, identifier 'Include' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    127  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    127  Warning 606: Non-ANSI escape sequence: '\h'
+             _
+  </ItemGroup>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    128  Error 129: declaration expected, identifier 'ItemGroup' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    128  Error 10: Expecting identifier or other declarator
+          _
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    129  Error 129: declaration expected, identifier 'Import' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    129  Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    129  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    129  Warning 606: Non-ANSI escape sequence: '\M'
+                    _
+  <ProjectExtensions>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    130  Error 129: declaration expected, identifier 'ProjectExtensions'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    130  Error 10: Expecting identifier or other declarator
+                 _
+    <VisualStudio>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    131  Error 129: declaration expected, identifier 'VisualStudio' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    131  Error 10: Expecting identifier or other declarator
+                      _
+      <UserProperties Reactor_Deploy="0" Reactor_Output="" Reactor_Configuration="ALL" Reactor_Project="" Reactor_Commands="-antitamp 1 -control_flow_obfuscation 1 -flow_level 9 -necrobit 1 -unprintable_characters 1  -resourceencryption 1  -stringencryption 1" Reactor_Enabled="1" />
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'UserProperties' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Deploy' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Output' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Configuration'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Commands' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 129: declaration expected, identifier 'Reactor_Enabled' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    132  Error 10: Expecting identifier or other declarator
+                  _
+    </VisualStudio>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    133  Error 129: declaration expected, identifier 'VisualStudio' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    133  Error 10: Expecting identifier or other declarator
+                     _
+  </ProjectExtensions>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    134  Error 129: declaration expected, identifier 'ProjectExtensions'
+    ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    134  Error 10: Expecting identifier or other declarator
+          _
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'To' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'modify' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'your' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'build' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'process' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'add' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'your' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'task' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'inside' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'one' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'of' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'the' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'targets' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'below' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'and' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'uncomment' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 129: declaration expected, identifier 'it' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    135  Error 10: Expecting identifier or other declarator
+             _
+       Other similar extension points exist, see Microsoft.Common.targets.
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'Other' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'similar' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'extension' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'points' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'exist' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'see' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'Microsoft' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'Common' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 10: Expecting identifier or other declarator
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 129: declaration expected, identifier 'targets' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    136  Error 10: Expecting identifier or other declarator
+          _
+  <Target Name="BeforeBuild">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    137  Error 129: declaration expected, identifier 'Target' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    137  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    137  Error 10: Expecting identifier or other declarator
+          _
+  </Target>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    138  Error 129: declaration expected, identifier 'Target' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    138  Error 10: Expecting identifier or other declarator
+          _
+  <Target Name="AfterBuild">
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    139  Error 129: declaration expected, identifier 'Target' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    139  Error 129: declaration expected, identifier 'Name' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    139  Error 10: Expecting identifier or other declarator
+          _
+  </Target>
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    140  Error 129: declaration expected, identifier 'Target' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    140  Error 10: Expecting identifier or other declarator
+    _
+</Project>
+
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    142  Info 783: Line does not end with new-line
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    142  Error 129: declaration expected, identifier 'Project' ignored
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    142  Error 10: Expecting identifier or other declarator
+Info 714: Symbol 'Files()' (line 67, file E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj)
+ not referenced
+E:\Dropbox\Beuth\Work\FlowCalibration\FlowCalibration\FlowCalibration.csproj 
+    67  Info 830: Location cited in prior message

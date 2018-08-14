@@ -1,0 +1,30 @@
+﻿using System.Threading;
+
+//basically an event class
+
+namespace FlowCalibration.tcm
+{
+    internal class TCMEvent
+    {
+        private AutoResetEvent autoEvent = new AutoResetEvent(false);
+        public TCMMessage message { get; private set; }
+
+        public void wait(int timeout)
+        {
+            message = null;
+            autoEvent.Reset();
+            autoEvent.WaitOne(timeout);
+        }
+
+        public void notify(TCMMessage message)
+        {
+            this.message = message;
+            autoEvent.Set();
+        }
+
+        public void close()
+        {
+            autoEvent.Close();
+        }
+    }
+}

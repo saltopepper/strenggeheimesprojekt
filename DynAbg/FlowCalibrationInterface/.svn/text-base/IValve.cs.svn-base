@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.ComponentModel;
+
+namespace FlowCalibrationInterface
+{
+	/// <summary>
+	/// Diese Schnittstelle beschreibt die Eigenschaften eines Ventils.
+	///	Obwohl der Aktor, welches das Ventil antreibt und das Ventil selbst zwei
+	///	eigenständige Objekte sind, werden diese hier zusammengefasst und als Ventil behandelt.
+	/// </summary>
+	public interface IValve
+	{
+		/// <summary>
+		/// Dieses Ereignis tritt bei Änderungen der Eigenschaften einer Instanz dieser Klasse auf.
+		/// </summary>
+		event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+		/// Diese Eigenschaft beschreibt die EnOcean-ID des Ventils.
+		/// </summary>
+		long ValveID { get; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt den Zustand des Ventils.
+		///	Der Wert kann jede Zahl von 0 bis 100 sein.<br>
+		///	0	= Das Ventil ist geschlossen.<br>
+		///	100	= Das Ventil ist komplett geöffnet.<br>
+		/// </summary>
+		int Value { get; }
+
+		/// <summary>
+		/// Diese Eigenschaft beschreibt die aktuell gemessene Temperatur.
+		/// </summary>
+		double Temperature { get; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt den Zustand der Ventilbatterien.<br>
+		///	True	= Die Batterien sind ok.<br>
+		///	False	= Die Ladung der Batterien ist unter 10 %.<br>
+		/// </summary>
+		bool Battery { get; }
+
+		/// <summary>
+		/// Diese Eigenschaft beschreibt die Signalstärke in Dezibel(dB) von 0 bis -255 
+		/// </summary>
+		int Signal { get; }
+
+		/// <summary>
+		/// Diese Eigenschaft beschreibt, ob die Kommunikation mit dem Ventil in Ordnung ist.
+		/// Wenn das angelernte Ventil sich innerhalb von 7 Sekunden
+		/// nicht gemeldet hat, wird dieses Flag auf <code>false</code> gesetzt.
+		/// </summary>
+		bool KommunikationOK { get; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt den Hersteller des Ventils.
+		///	Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.
+		/// </summary>
+		string Manufacturer { get; set; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt die TGA-Nummer des Ventils.
+		///	Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.
+		/// </summary>
+		string TGA { get; set; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt den gewünschten Volumenstrom.
+		///	Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.
+		/// </summary>
+		double DesiredVolumeFlow { get; set; }
+
+		/// <summary>
+		///	Diese Eigenschaft beschreibt die einzustellende Voreinstellung.
+		///	Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt.
+		/// </summary>
+		double Voreinstellung { get; }
+
+        /// <summary>
+        ///	Diese Eigenschaft beschreibt den Druckverlust des Ventils.
+        ///	Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt.
+        /// </summary>
+        double Druckverlust { get; }
+
+		/// <summary>
+		/// Diese Eigenschaft beschreibt den Hub des Ventils.
+		/// </summary>
+		double Hub { get; }
+	}
+}

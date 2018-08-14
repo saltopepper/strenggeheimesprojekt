@@ -1,0 +1,34 @@
+﻿using System;
+
+namespace FlowCalibrationInterface
+{
+	public interface IMessung
+	{
+		/// <summary>
+		/// Gibt den Zeipunkt der Messung an
+		/// </summary>
+		DateTime DateTime { get; }
+
+		/// <summary>
+		/// Gibt den gemessenen Differenzdruck an.
+		/// </summary>
+		int Differenzdruck { get; }
+
+		/// <summary>
+		/// Gibt die Nummer der Messung an.
+		/// </summary>
+		int Messnummer { get; }
+
+		/// <summary>
+		/// Gibt an, ob ein Ventil bei der Messung offen oder geschlossen war.<br>
+		/// <code>True</code> = offen<br>
+		/// <code>False</code> = geschlossen<br>
+		/// </summary>
+		bool[] VentilStatus { get; }
+
+		/// <summary>
+		/// Gibt den gemessenen Volumenstrom an.
+		/// </summary>
+		int Volumenstrom { get; }
+	}
+}

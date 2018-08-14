@@ -1,0 +1,3 @@
+Midnight Calibration	0
+Manueller Sollwert	0
+Simplify GUI	0

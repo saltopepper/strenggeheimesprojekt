@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace FlowCalibrationInterface
+{
+	/// <summary>
+	/// Schnittstelle um den Status des hydraulischen Abgleichs anzugeben
+	/// </summary>
+	public interface ICalibrationStateObject
+	{
+		/// <summary>
+		/// Gibt den Status des hydraulischen Abgleichs an
+		/// </summary>
+		State State { get; }
+		/// <summary>
+		/// In Abhängigkeit des Status repräsentiert diese Eigenschaft ein entspechendes Objekt<br>
+		/// <b><see cref="State"/>-Codes</b><br><br>
+		/// <i>CANCELED</i><br>
+		///		Das Objekt ist NULL<br>
+		/// <i>COMPLETED</i><br>
+		///		Das Objekt ist eine Objektinstanz welche die Schnittstelle ICalibrationResult implementiert<br>
+		/// <i>PROGRESS</i><br>
+		///		Das Objekt ist vom Typ int und enthält den Status des hydraulischen Abgleichs in Prozent.<br>
+		/// <i>ERROR</i><br>
+		///		Das Objekt ist eine Instanz der Klasse CalibrationException, welche etwas über den aufgetretenen Fehler aussagt.<br>
+		/// </summary>
+		Object StateObject { get;  }
+	}
+}

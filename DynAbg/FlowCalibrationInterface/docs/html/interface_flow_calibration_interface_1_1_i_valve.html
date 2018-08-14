@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>FlowCalibrationInterface: FlowCalibrationInterface.IValve Schnittstellenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Erzeugt von Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">FlowCalibrationInterface&#160;<span id="projectnumber">1.0.0</span></div>
+  </td>
+  <td>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('interface_flow_calibration_interface_1_1_i_valve.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#properties">Propertys</a> &#124;
+<a href="#events">Ereignisse</a>  </div>
+  <div class="headertitle">
+<div class="title">FlowCalibrationInterface.IValve Schnittstellenreferenz</div>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="FlowCalibrationInterface::IValve" -->
+<p>Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil antreibt und das Ventil selbst zwei eigenständige Objekte sind, werden diese hier zusammengefasst und als Ventil behandelt.  
+ <a href="interface_flow_calibration_interface_1_1_i_valve.html#details">Mehr ...</a></p>
+
+<p><a href="interface_flow_calibration_interface_1_1_i_valve-members.html">Aufstellung aller Elemente</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="properties"></a>
+Propertys</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a506fb4a06c6c047c013be3a921541976">ValveID</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt die EnOcean-ID des Ventils.  <a href="#a506fb4a06c6c047c013be3a921541976"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a8a986db49726f012252e1bd13386b848">Value</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt den Zustand des Ventils. Der Wert kann jede Zahl von 0 bis 100 sein.<br/>
+ 0 = Das Ventil ist geschlossen.<br/>
+ 100 = Das Ventil ist komplett geöffnet.<br/>
+  <a href="#a8a986db49726f012252e1bd13386b848"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#ab418c9249294d645edd350a7b3d6a147">Temperature</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt die aktuell gemessene Temperatur.  <a href="#ab418c9249294d645edd350a7b3d6a147"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a097750441437e50994e3d4d2cf648f07">Battery</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt den Zustand der Ventilbatterien.<br/>
+ True = Die Batterien sind ok.<br/>
+ False = Die Ladung der Batterien ist unter 10 %.<br/>
+  <a href="#a097750441437e50994e3d4d2cf648f07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#ae498371621dc99a19d76a33754643046">Signal</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt die Signalstärke in Dezibel(dB) von 0 bis -255.  <a href="#ae498371621dc99a19d76a33754643046"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a06da706229e8be45003761ffbc48ea75">Manufacturer</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt den Hersteller des Ventils. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.  <a href="#a06da706229e8be45003761ffbc48ea75"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a298b53de94f793bc587c2c2c5e93df5f">TGA</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt die TGA-Nummer des Ventils. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.  <a href="#a298b53de94f793bc587c2c2c5e93df5f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a7598a5eb9bc79ef8053c11db88839ebf">DesiredVolumeFlow</a><code> [get, set]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt den gewünschten Volumenstrom. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann.  <a href="#a7598a5eb9bc79ef8053c11db88839ebf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a4703bc614cf191455432994f2a192eea">Voreinstellung</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt die einzustellende Voreinstellung. Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt.  <a href="#a4703bc614cf191455432994f2a192eea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#a342e82cfd19a0c928a1cbb870898333d">Druckverlust</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Eigenschaft beschreibt den Druckverlust des Ventils. Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt.  <a href="#a342e82cfd19a0c928a1cbb870898333d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="events"></a>
+Ereignisse</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">PropertyChangedEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html#aea98ccac6077fad538c906002fa1fce3">PropertyChanged</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dieses Ereignis tritt bei Änderungen der Eigenschaften einer Instanz dieser Klasse auf.  <a href="#aea98ccac6077fad538c906002fa1fce3"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Diese Schnittstelle beschreibt die Eigenschaften eines Ventils. Obwohl der Aktor, welches das Ventil antreibt und das Ventil selbst zwei eigenständige Objekte sind, werden diese hier zusammengefasst und als Ventil behandelt. </p>
+</div><hr/><h2>Dokumentation der Propertys</h2>
+<a class="anchor" id="a097750441437e50994e3d4d2cf648f07"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Battery" ref="a097750441437e50994e3d4d2cf648f07" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FlowCalibrationInterface.IValve.Battery<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt den Zustand der Ventilbatterien.<br/>
+ True = Die Batterien sind ok.<br/>
+ False = Die Ladung der Batterien ist unter 10 %.<br/>
+ </p>
+
+</div>
+</div>
+<a class="anchor" id="a7598a5eb9bc79ef8053c11db88839ebf"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::DesiredVolumeFlow" ref="a7598a5eb9bc79ef8053c11db88839ebf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FlowCalibrationInterface.IValve.DesiredVolumeFlow<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt den gewünschten Volumenstrom. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann. </p>
+
+</div>
+</div>
+<a class="anchor" id="a342e82cfd19a0c928a1cbb870898333d"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Druckverlust" ref="a342e82cfd19a0c928a1cbb870898333d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FlowCalibrationInterface.IValve.Druckverlust<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt den Druckverlust des Ventils. Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt. </p>
+
+</div>
+</div>
+<a class="anchor" id="a06da706229e8be45003761ffbc48ea75"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Manufacturer" ref="a06da706229e8be45003761ffbc48ea75" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string FlowCalibrationInterface.IValve.Manufacturer<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt den Hersteller des Ventils. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae498371621dc99a19d76a33754643046"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Signal" ref="ae498371621dc99a19d76a33754643046" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FlowCalibrationInterface.IValve.Signal<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt die Signalstärke in Dezibel(dB) von 0 bis -255. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab418c9249294d645edd350a7b3d6a147"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Temperature" ref="ab418c9249294d645edd350a7b3d6a147" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FlowCalibrationInterface.IValve.Temperature<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt die aktuell gemessene Temperatur. </p>
+
+</div>
+</div>
+<a class="anchor" id="a298b53de94f793bc587c2c2c5e93df5f"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::TGA" ref="a298b53de94f793bc587c2c2c5e93df5f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string FlowCalibrationInterface.IValve.TGA<code> [get, set]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt die TGA-Nummer des Ventils. Diese Eigenschaft muss gesetzt werden, damit der hydraulische Abgleich gestartet werden kann. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8a986db49726f012252e1bd13386b848"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Value" ref="a8a986db49726f012252e1bd13386b848" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FlowCalibrationInterface.IValve.Value<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt den Zustand des Ventils. Der Wert kann jede Zahl von 0 bis 100 sein.<br/>
+ 0 = Das Ventil ist geschlossen.<br/>
+ 100 = Das Ventil ist komplett geöffnet.<br/>
+ </p>
+
+</div>
+</div>
+<a class="anchor" id="a506fb4a06c6c047c013be3a921541976"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::ValveID" ref="a506fb4a06c6c047c013be3a921541976" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long FlowCalibrationInterface.IValve.ValveID<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt die EnOcean-ID des Ventils. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4703bc614cf191455432994f2a192eea"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::Voreinstellung" ref="a4703bc614cf191455432994f2a192eea" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FlowCalibrationInterface.IValve.Voreinstellung<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Diese Eigenschaft beschreibt die einzustellende Voreinstellung. Die Voreinstellung wird während des hydraulischen Abgleichs gesetzt. </p>
+
+</div>
+</div>
+<hr/><h2>Ereignisdokumentation</h2>
+<a class="anchor" id="aea98ccac6077fad538c906002fa1fce3"></a><!-- doxytag: member="FlowCalibrationInterface::IValve::PropertyChanged" ref="aea98ccac6077fad538c906002fa1fce3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PropertyChangedEventHandler FlowCalibrationInterface.IValve.PropertyChanged</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dieses Ereignis tritt bei Änderungen der Eigenschaften einer Instanz dieser Klasse auf. </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="namespace_flow_calibration_interface.html">FlowCalibrationInterface</a>      </li>
+      <li class="navelem"><a class="el" href="interface_flow_calibration_interface_1_1_i_valve.html">IValve</a>      </li>
+      <li class="footer">Erzeugt am Thu Jul 7 2011 08:20:54 für FlowCalibrationInterface von&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Propertys</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Ereignisse</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

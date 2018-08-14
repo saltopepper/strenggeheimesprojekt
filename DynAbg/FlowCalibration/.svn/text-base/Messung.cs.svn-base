@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using FlowCalibrationInterface;
+
+namespace FlowCalibration
+{
+	internal class Messung : IMessung
+	{
+		public int Messnummer { get; private set; }
+		public bool[] VentilStatus { get; internal set; }
+		public int Differenzdruck { get; internal set; }
+		public int Volumenstrom { get; internal set; }
+		public DateTime DateTime { get; internal set; }
+
+		public Messung(int messnummer)
+		{
+			this.Messnummer = messnummer;
+		}
+
+		public Messung(int messnummer, bool[] ventilStatus, int differenzdruck, int volumenstrom)
+		{
+			this.Messnummer = messnummer;
+			this.VentilStatus = ventilStatus;
+			this.Differenzdruck = differenzdruck;
+			this.Volumenstrom = volumenstrom;
+		}
+	}
+}

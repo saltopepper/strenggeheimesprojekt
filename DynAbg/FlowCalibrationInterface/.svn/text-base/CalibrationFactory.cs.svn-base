@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Reflection;
+
+namespace FlowCalibrationInterface
+{
+	/// <summary>
+	/// Diese Klasse enthält Methoden zum Laden der Schnittstelle ICalibration.
+	/// </summary>
+	public class CalibrationFactory
+	{
+		/// <summary>
+		/// Lädt die Assembly mit der Schnittstelle ICalibration aus der DLL FlowCalibration.dll.
+		/// </summary>
+		/// <returns>
+		/// Ein Objekt mit der Schnittstelle ICalibration.
+		/// </returns>
+		/// <exception cref="CalibrationException">
+		/// <b><see cref="Error"/>-Codes</b><br><br>
+		///	<i>LIB_NOT_FOUND:</i><br>
+		///		Die Bibliothek FlowCalibration.dll wurde nicht gefunden oder es trat ein Fehler beim Laden auf.
+		/// </exception>
+		public static ICalibration createCalibration()
+		{
+			Assembly assembly = null;
+
+			try
+			{
+				assembly = Assembly.LoadFrom("FlowCalibration.dll");
+			}
+			catch (Exception e)
+			{
+				throw new CalibrationException(Error.LIB_NOT_FOUND, e);
+			}
+
+			Type type = assembly.GetType("FlowCalibration.CalibrationFactory");
+			ICalibration iCalibration = (ICalibration)type.InvokeMember("getInstance", BindingFlags.InvokeMethod, null, type, new object[0]);
+			return iCalibration;
+		}
+	}
+}

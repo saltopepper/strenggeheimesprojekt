@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7148EB4C-AD6F-47F6-BF6F-77D3620FB39C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DynAbg</RootNamespace>
+    <AssemblyName>DynAbg</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.cs" />
+    <Compile Include="generic\EventList.cs" />
+    <Compile Include="gui\control\HeaterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\control\HeaterPanel.Designer.cs">
+      <DependentUpon>HeaterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\control\HeaterPanelSimplified.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\control\HeaterPanelSimplified.Designer.cs">
+      <DependentUpon>HeaterPanelSimplified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\control\RoomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\control\RoomPanel.Designer.cs">
+      <DependentUpon>RoomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ErrorBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ErrorBox.Designer.cs">
+      <DependentUpon>ErrorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\control\FormRoomGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\control\FormRoomGraph.Designer.cs">
+      <DependentUpon>FormRoomGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FormValveInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FormValveInfo.Designer.cs">
+      <DependentUpon>FormValveInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayForm.Designer.cs">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart.Designer.cs">
+      <DependentUpon>OverlayStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_2.Designer.cs">
+      <DependentUpon>OverlayStart_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_3_Raum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_3_Raum.Designer.cs">
+      <DependentUpon>OverlayStart_3_Raum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_4_Ventile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_4_Ventile.Designer.cs">
+      <DependentUpon>OverlayStart_4_Ventile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_5_AnlernenTCM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_5_AnlernenTCM.Designer.cs">
+      <DependentUpon>OverlayStart_5_AnlernenTCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_6_AnlernenModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_6_AnlernenModule.Designer.cs">
+      <DependentUpon>OverlayStart_6_AnlernenModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_7_AnlernenVentile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\Overlay\OverlayStart_7_AnlernenVentile.Designer.cs">
+      <DependentUpon>OverlayStart_7_AnlernenVentile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\control\RoomPanelSimplified.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui\control\RoomPanelSimplified.Designer.cs">
+      <DependentUpon>RoomPanelSimplified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Heater.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Room.cs" />
+    <Compile Include="roomData.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="valve\ValveInfo.cs" />
+    <EmbeddedResource Include="gui\control\HeaterPanel.resx">
+      <DependentUpon>HeaterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\control\HeaterPanelSimplified.resx">
+      <DependentUpon>HeaterPanelSimplified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\control\RoomPanel.resx">
+      <DependentUpon>RoomPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\control\RoomPanelSimplified.resx">
+      <DependentUpon>RoomPanelSimplified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ErrorBox.resx">
+      <DependentUpon>ErrorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\control\FormRoomGraph.resx">
+      <DependentUpon>FormRoomGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FormValveInfo.resx">
+      <DependentUpon>FormValveInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayForm.resx">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart.resx">
+      <DependentUpon>OverlayStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_2.resx">
+      <DependentUpon>OverlayStart_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_3_Raum.resx">
+      <DependentUpon>OverlayStart_3_Raum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_4_Ventile.resx">
+      <DependentUpon>OverlayStart_4_Ventile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_5_AnlernenTCM.resx">
+      <DependentUpon>OverlayStart_5_AnlernenTCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_6_AnlernenModule.resx">
+      <DependentUpon>OverlayStart_6_AnlernenModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Overlay\OverlayStart_7_AnlernenVentile.resx">
+      <DependentUpon>OverlayStart_7_AnlernenVentile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aktor_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vdz.png" />
+    <None Include="Resources\abgleich24.png" />
+    <Content Include="Resources\Beuth.ico" />
+    <Content Include="Resources\Beuth.png" />
+    <None Include="Resources\ha-haus.png" />
+    <Content Include="Resources\ic_off.png" />
+    <Content Include="Resources\text24.png" />
+    <None Include="Resources\SizeGrip.png" />
+    <None Include="Resources\Save.bmp" />
+    <None Include="Resources\room.png" />
+    <None Include="Resources\openfolder_24.bmp" />
+    <None Include="Resources\NewDocument.bmp" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\ic.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlowCalibrationInterface\FlowCalibrationInterface.csproj">
+      <Project>{d006ca31-e299-4b2b-938d-ed518b9ef99e}</Project>
+      <Name>FlowCalibrationInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlowCalibration\FlowCalibration.csproj">
+      <Project>{73675a87-b2b3-4b12-b03b-1f9d485f5bfd}</Project>
+      <Name>FlowCalibration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

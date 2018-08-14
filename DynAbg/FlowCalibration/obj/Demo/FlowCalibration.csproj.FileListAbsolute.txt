@@ -1,0 +1,9 @@
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\FlowCalibration.dll
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\FlowCalibration.pdb
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\FlowCalibrationInterface.dll
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\vsmCommunicationInterface.dll
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\FlowCalibrationInterface.pdb
+Z:\Visual Studio\FlowCalibration\FlowCalibration\bin\Demo\vsmCommunicationInterface.pdb
+Z:\Visual Studio\FlowCalibration\FlowCalibration\obj\Demo\ResolveAssemblyReference.cache
+Z:\Visual Studio\FlowCalibration\FlowCalibration\obj\Demo\FlowCalibration.dll
+Z:\Visual Studio\FlowCalibration\FlowCalibration\obj\Demo\FlowCalibration.pdb

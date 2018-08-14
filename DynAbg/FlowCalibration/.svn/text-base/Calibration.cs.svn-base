@@ -1,0 +1,845 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO.Ports;
+using System.Runtime.CompilerServices;
+using FlowCalibrationInterface;
+using vsmCommunicationInterface;
+using System.ComponentModel;
+using System.Threading;
+using vsmCommunicationInterface.HydraulicCalibration;
+using System.IO;
+using System.Diagnostics;
+using FlowCalibration.algorithmus;
+
+#if !Demo
+using FlowCalibration.tools;
+using FlowCalibration.tcm;
+#endif
+
+namespace FlowCalibration
+{
+	public delegate void ErrorEventHandler(CalibrationException exception);
+
+	internal class Calibration : ICalibration
+	{
+		private const int allowedErrors = 3;
+
+#if !Demo
+		private TCM tcm;
+		private TCMEvent tcmEvent = new TCMEvent();
+#endif
+
+		private Thread checkThread;
+		private ReaderWriterLock valvesLock = new ReaderWriterLock();
+
+#if KP || Demo
+		private Random random = new Random();
+#endif
+
+		public event ErrorEventHandler errorOccurred;
+		public event CalibrationEventHandler calibrationStateChanged;
+
+		private BackgroundWorker worker;
+		private List<Valve> valves;
+
+		internal Calibration()
+		{
+		}
+
+		public void init()
+		{
+			if (Initialized)
+				return;
+
+#if !Demo
+			tcm = new TCM();
+
+			tcm.connect();
+
+			if (!tcm.isConnected())
+				throw new CalibrationException(Error.NO_TCM_FOUND, tcm.getLastErrorMessage());
+
+			tcm.messageReceived += new MessageEventHandler(tcmMessageReceived);
+			tcm.errorOccurred += new tcm.ErrorEventHandler(tcmError);
+#endif
+
+			valves = new List<Valve>();
+			Initialized = true;
+
+			checkThread = new Thread(new ThreadStart(CheckThread));
+			checkThread.Name = "Valve communication check";
+			checkThread.Start();
+		}
+
+		private void CheckThread()
+		{
+			while (Thread.CurrentThread.ThreadState != System.Threading.ThreadState.Aborted)
+			{
+				Thread.Sleep(1000);
+				DateTime datetime = DateTime.Now;
+
+				// Mit dem Valveobjekt kann erst nach dem lock gearbeitet werden,
+				// da es sonst zu einer race condition kommen kann,
+				// wenn mit dem GUI-Thread synchronisiert wird.
+
+#if !Demo
+
+				valvesLock.AcquireReaderLock(-1);
+
+				// In try weil der Thread abgebrochen werden kann und dann eine Exception geworfen wird.
+				try
+				{
+					foreach (Valve valve in valves)
+						if (valve.dateTimeReceived.AddSeconds(10).Ticks < datetime.Ticks)
+							valve.KommunikationOK = false;
+				}
+				finally
+				{
+					valvesLock.ReleaseReaderLock();
+				}
+#endif
+			}
+		}
+
+#if !Demo
+		private static bool isValveLearnMessage(TCMMessage message)
+		{
+			return message.learnMessage && !message.regularData && message.orgByte == 0x07 && message.function == 0x20 && message.type == 0x01 && message.manufacturer == 0x0A;
+		}
+
+		private static bool isValveMessage(TCMMessage message, long id)
+		{
+			return !message.learnMessage && message.regularData && message.objectID == id;
+		}
+
+		private int getNextID()
+		{
+			int functionID = 0;
+			List<Valve> valves;
+
+			//Kopie erzeugen und dann sortieren
+			valves = new List<Valve>(this.valves);
+			
+			valves.Sort(delegate(Valve valve1, Valve valve2)
+			{
+				return valve1.FunctionID.CompareTo(valve2.FunctionID);
+			});
+
+			foreach (Valve valve in valves)
+			{
+				//Wenn wir schon hier sind, geht nichts mehr
+				if (functionID == 127)
+					return -1;
+
+				if (valve.FunctionID != functionID)
+					break;
+
+				functionID++;
+			}
+
+			return functionID;
+		}
+
+		private bool getValve(long valveID, out Valve valve)
+		{
+			valve = null;
+			valvesLock.AcquireReaderLock(-1);
+
+			foreach (Valve tmpValve in valves)
+			{
+				if (tmpValve.ValveID == valveID)
+				{
+					valve = tmpValve;
+					break;
+				}
+			}
+
+			valvesLock.ReleaseReaderLock();
+			return valve != null;
+		}
+
+		private bool hasValve(long id)
+		{
+			bool hasValve = false;
+
+			valvesLock.AcquireReaderLock(-1);
+
+			foreach (Valve tmpValve in valves)
+			{
+				if (tmpValve.ValveID == id)
+				{
+					hasValve = true;
+					break;
+				}
+			}
+
+			valvesLock.ReleaseReaderLock();
+			return hasValve;
+		}
+
+		private void tcmMessageReceived(TCMMessage message)
+		{
+			Debug.WriteLine(string.Format("Message recevied: {0}", TCM.getHexString(message.message)));
+
+			Valve valve;
+
+			lock (tcmEvent)
+			{
+				tcmEvent.notify(message);
+			}
+
+			if (message.learnMessage || !getValve(message.objectID, out valve))
+				return;
+
+			if (valve.Learned)
+				sendAnswer(valve);
+
+			if (valve.Learned)
+			{
+				valve.Signal = message.signalStrength;
+				valve.Value = message.byte3;
+				valve.Temperature = ((40D / 255D) * (double)message.byte1);
+				valve.Battery = TCMMessage.readBits((byte)message.byte2, 3, 1) == 1;
+				valve.KommunikationOK = true;
+				valve.dateTimeReceived = message.datum_uhrzeit;
+			}
+		}
+
+		private void sendAnswer(Valve valve)
+		{
+			long id = tcm.getID() + valve.FunctionID;
+			byte[] data = new byte[] { 0xA5, 0x5A, 0x6B, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+			data[04] = 0x00;// (byte)(valve.Command == COMMAND.OPEN ? 0x64 : 0x00);
+			data[05] = valve.travel; //hier soll später mal der Hub eingetragen werden, abhängig von Bit sf in Byte1 (1 = service ==> dann Hub übertragbar)
+			data[06] = Convert.ToByte(String.Format("00{0}{1}0001", valve.Command == VALVE_COMMAND.OPEN ? "1" : "0", valve.Command == VALVE_COMMAND.OPEN ? "0" : "1"), 2);// sf ist hier immer gesetzt
+			//TODO neu
+            //Das Poweroff spielt sich auf bit0 ab. Aktor erhält Poweroff, fährt noch Ventil; Nach Abschluss der
+            //der gewünschten Stellung für das Ventil wird Poweroff durchgeführt
+			data[07] = Convert.ToByte(String.Format("0000100{0}", valve.power_off == true ? "1" : "0"), 2);
+              //TODO raus     
+            //data[07] = Convert.ToByte(String.Format("0000100{0}", valve.Power == VALVE_POWER.POWER_OFF ? "1" :"0"));
+            //data[07] = 0x08;
+
+			data[08] = (byte)(id >> 24);
+			data[09] = (byte)(id >> 16);
+			data[10] = (byte)(id >> 8);
+			data[11] = (byte)(id);
+			data = Tools.setChecksum(data);
+			bool versendet = tcm.writeCommand(data);
+            //TODO neu bei Poweroff sich den boolean von writeCommmand
+            if (valve.power_off == true)
+                valve.power_off_transmitted = versendet;
+         
+
+
+		}
+
+		private void tcmError(string errorMessage)
+		{
+			Trace.WriteLine(string.Format("TCM error: {0}", errorMessage));
+
+			if (errorOccurred != null)
+				errorOccurred(new CalibrationException(Error.TCM, errorMessage));
+		}
+#endif
+
+		#region ICalibrate
+
+		public bool Initialized { get; private set; }
+
+		public long getTCMID()
+		{
+			if (!Initialized)
+				throw new CalibrationException(Error.NOT_INITIALIZED);
+
+#if !Demo
+			return tcm.getID();
+#else
+			return new Random().Next();
+#endif
+		}
+
+		public void close()
+		{
+			if (!Initialized)
+				return;
+#if !Demo
+
+            //TODO Ventil ausschalten
+            //TOOD neu
+            //Dient zur Überwachung was schon versendet worden ist
+            // bool[] sendedPowerOff = new bool[valves.Count];
+
+
+            //Bit umschalten, der Aktor empfängt dann als nächstes die Ausschaltfunktion
+
+			valvesLock.AcquireReaderLock(-1);
+
+			foreach (Valve valve in valves)
+				valve.power_off = true;
+
+			valvesLock.ReleaseReaderLock();
+
+			bool powerOff = true;
+
+			DateTime startTime = DateTime.Now;
+
+            do
+            {
+                //Weiß nicht ob das so toll ist, aber irgendwie muss gewartet werden
+                //damit man eine Chance erhält auf den Aktor zu antworten
+                powerOff = true;
+
+                //Vielleicht hier alles Ventile einzeln rauswerfen, die bereits sich schon "abgemeldet" haben
+				valvesLock.AcquireReaderLock(-1);
+				
+				foreach (Valve valve in valves)
+					powerOff &= valve.power_off_transmitted;
+
+				valvesLock.ReleaseReaderLock();
+
+				Thread.Sleep(100);
+            }
+            while (!powerOff && startTime.AddSeconds(2).Ticks > DateTime.Now.Ticks);
+
+			try { tcm.disconnect(); } catch (Exception) { }
+			CalibrationFactory.calibration = null;
+#endif
+
+			valvesLock.AcquireWriterLock(-1);
+			valves.Clear();
+			valvesLock.ReleaseWriterLock();
+
+			checkThread.Abort();
+			Initialized = false;
+		}
+
+		public void openValve(IValve valve)
+		{
+#if !Demo
+			if (!(valve is Valve))
+				throw new CalibrationException(Error.UNKNOWN_VALVE_OBJECT);
+
+			(valve as Valve).Command = VALVE_COMMAND.OPEN;
+#endif
+		}
+
+		public void closeValve(IValve valve)
+		{
+#if !Demo
+			if (!(valve is Valve))
+				throw new CalibrationException(Error.UNKNOWN_VALVE_OBJECT);
+
+			(valve as Valve).Command = VALVE_COMMAND.CLOSE;
+#endif
+		}
+
+		public void setValveTravel(IValve valve, double travel)
+		{
+#if !Demo
+			if (!(valve is Valve))
+				throw new CalibrationException(Error.UNKNOWN_VALVE_OBJECT);
+
+			travel = Math.Max(Math.Min(travel, 4), 1);
+			(valve as Valve).travel = (byte)(travel * 10);
+#endif
+		}
+
+		public void deactivateValve(IValve valve)
+		{
+#if !Demo
+            
+			if (!(valve is Valve))
+				throw new CalibrationException(Error.UNKNOWN_VALVE_OBJECT);
+
+            //TODO neu Ventil ausschalten
+            //bool für poweroff setzen und mal schauen was passiert
+            (valve as Valve).power_off = true;
+            //jetzt abwarten ob das Signal versendet worden ist
+            bool fertig = false;
+            //Zaehler ansonsten kann es vielleicht passieren das man auf Sankt Nimmerleinstag wartet
+            int zaehler = 0;
+
+            do
+            {
+                //Kurze Zeit innehalten...dem Aktor die Chance geben sich mal wieder zu melden
+                System.Threading.Thread.Sleep(2000);
+                zaehler++;
+
+                if ((valve as Valve).power_off_transmitted == true || zaehler > 3)
+                    fertig = true;
+            }
+            while(!fertig);
+
+			valvesLock.AcquireWriterLock(-1);
+			valves.Remove((valve as Valve));
+			valvesLock.ReleaseWriterLock();
+#endif
+		}
+
+		[MethodImpl(MethodImplOptions.Synchronized)]
+		public IValve anlernen(int timeout)
+		{
+			if (!Initialized)
+				throw new CalibrationException(Error.NOT_INITIALIZED);
+#if !Demo
+			TCMMessage message;
+			DateTime startTime = System.DateTime.Now;
+
+			bool resultOK = false;
+
+			do
+			{
+				tcmEvent.wait(timeout);
+
+				lock (tcmEvent)
+				{
+					message = tcmEvent.message;
+				}
+
+				resultOK = message != null && isValveLearnMessage(message);
+			}
+			while (!resultOK && startTime.AddMilliseconds(timeout).Ticks > System.DateTime.Now.Ticks);
+
+			if (!resultOK)
+				throw new CalibrationException(Error.NO_LEARN_MESSAGE);
+
+			Valve valve;
+
+			if (getValve(message.objectID, out valve))
+				throw new CalibrationException(Error.VALVE_ALREADY_LEARNED);
+
+			valve = new Valve(message.objectID, message.signalStrength, true, 0, 0);
+			int functionID = getNextID();
+
+			if (functionID == -1)
+				throw new CalibrationException(Error.NO_FREE_IDS);
+
+			valve.FunctionID = functionID;
+
+			byte[] data = new byte[] { 0xA5, 0x5A, 0x6B, 0x07, 0x80, 0x0F, 0xFF, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00 };
+			long id = tcm.getID();
+			id += valve.FunctionID;
+
+			data[08] = (byte)(id >> 24);
+			data[09] = (byte)(id >> 16);
+			data[10] = (byte)(id >> 8);
+			data[11] = (byte)(id);
+			data = Tools.setChecksum(data);
+
+			tcm.writeCommand(data);
+
+			do
+			{
+				tcmEvent.wait(timeout);
+
+				lock (tcmEvent)
+				{
+					message = tcmEvent.message;
+				}
+
+				resultOK = message != null && isValveMessage(message, valve.ValveID);
+			}
+			while (!resultOK && startTime.AddMilliseconds(timeout).Ticks > System.DateTime.Now.Ticks);
+
+			if (!resultOK)
+				throw new CalibrationException(Error.NO_LEARN_MESSAGE);
+
+			valve.Signal = message.signalStrength;
+			valve.Value = message.byte3;
+			valve.Temperature = (double)((40D / 255D) * (double)message.byte1);
+			valve.Battery = TCMMessage.readBits((byte)message.byte2, 3, 1) == 1;
+			valve.Learned = true;
+			valve.KommunikationOK = true;
+			valve.dateTimeReceived = DateTime.Now;
+
+#else
+			Valve valve = new Valve(random.Next(), 0, true, 21, 0);
+			valve.Learned = true;
+			valve.KommunikationOK = true;
+			valve.dateTimeReceived = DateTime.Now;
+#endif
+			valvesLock.AcquireWriterLock(-1);
+			valves.Add(valve);
+			valvesLock.ReleaseWriterLock();
+
+			return valve;
+		}
+
+		private class CalibrationObject
+		{
+			public IVSMCommunication Communication { get; set; }
+			public List<IValve> Valves { get; set; }
+			public int Timeout { get; set; }
+
+			public CalibrationObject(IVSMCommunication communication, List<IValve> valves, int timeout)
+			{
+				this.Communication = communication;
+				this.Valves = valves;
+				this.Timeout = timeout;
+			}
+		}
+
+		public void start(IVSMCommunication communication, List<IValve> valves)
+		{
+			this.start(communication, valves, 120000);
+		}
+
+		public void start(IVSMCommunication communication, List<IValve> valves, int timeout)
+		{
+			foreach (IValve valve in valves)
+				if (!(valve is Valve))
+					throw new CalibrationException(Error.UNKNOWN_VALVE_OBJECT);
+
+			//valves = new List<IValve>();
+
+			//IValve newValve;
+			//newValve = new Valve(1928978987);
+			//newValve.DesiredVolumeFlow = 49.033486808772018;
+			//newValve.TGA = "0220??070101010000010100000000000100";
+			//newValve.Manufacturer = "Heimeier";
+			//valves.Add(newValve);
+
+			//newValve = new Valve(1888964353);
+			//newValve.DesiredVolumeFlow = 31.436791945946577;
+			//newValve.TGA = "0204020300000500000302000000000001??";
+			//newValve.Manufacturer = "Danfoss";
+			//valves.Add(newValve);
+
+			//newValve = new Valve(1350197799);
+			//newValve.DesiredVolumeFlow = 36.617800606457941;
+			//newValve.TGA = "0203??0100000100000101000000000004??";
+			//newValve.Manufacturer = "Heimeier";
+			//valves.Add(newValve);
+
+			worker = new BackgroundWorker();
+			worker.DoWork += new DoWorkEventHandler(calibrate);
+			worker.ProgressChanged += new ProgressChangedEventHandler(calibrationProgressChanged);
+			worker.WorkerReportsProgress = true;
+			worker.WorkerSupportsCancellation = true;
+			worker.RunWorkerAsync(new CalibrationObject(communication, valves, timeout));
+		}
+
+		private void calibrate(object source, DoWorkEventArgs arguments)
+		{
+			BackgroundWorker worker = source as BackgroundWorker;
+			CalibrationObject calibrationObject = arguments.Argument as CalibrationObject;
+			List<IValve> valves = calibrationObject.Valves;
+			List<IMessung> messdaten = new List<IMessung>();
+			IVSMCommunication communication = calibrationObject.Communication;
+			int timeout = calibrationObject.Timeout;
+
+			int ventile = valves.Count;
+			int messungen = (int)((double)ventile * (((double)ventile + 1D) / 2D));
+			int aktuellesVentil = 0;
+			int messungBeiVentilwechsel = 0;
+			int steps = messungen * 3 + 1;
+			int currentStep = 0;
+			int percent = 0;
+			ushort volumestrom = 0;
+			ushort differenzdruck = 0;
+
+			double[] messwerte = new double[messungen * 2];
+
+			// Erst alle Ventile schließen
+			foreach (Valve valve in valves)
+				valve.Command = VALVE_COMMAND.CLOSE;
+
+#if !Demo || KP
+			//Warten auf die Ventileinstellungen
+			DateTime start = System.DateTime.Now;
+			bool result1 = true;
+
+			do
+			{
+				result1 = true;
+
+				foreach (Valve valve in valves)
+					result1 &= valve.Command == VALVE_COMMAND.OPEN ? valve.Value == 100 : valve.Value == 0;
+
+				Thread.Sleep(100);
+			}
+			while (!result1 && start.AddMilliseconds(timeout).Ticks > System.DateTime.Now.Ticks && !worker.CancellationPending);
+
+			if (worker.CancellationPending)
+			{
+				foreach (Valve valve in valves)
+					valve.Command = VALVE_COMMAND.CLOSE;
+
+				worker.ReportProgress(percent, new CalibrationStateObject(State.CANCELED, null));
+				return;
+			}
+
+			if (!result1)
+			{
+				worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, new CalibrationException(Error.VALVE_NOT_RESPONDING, String.Format("Eines der Ventile reagierte nicht innerhalb von {0} Millisekunden", timeout))));
+				return;
+			}
+
+#endif
+
+#if Demo || KP
+			volumestrom = 0;
+			differenzdruck = (ushort)random.Next(1000); ;
+#else
+			// Volumenstrom und Differenzdruck messen
+			// Fünf Sekunden warten bevor die Messung durchgeführt wird
+			//Thread.Sleep(5000);
+
+			communication.StartComProcess(CustomAppId.HydraulicCalibration);
+			ICommRequestDataResult data1 = communication.GetComData(CustomAppId.HydraulicCalibration);
+			communication.StartComProcess(CustomAppId.HydraulicCalibration);
+
+			if (data1.Data == null || !(data1.Data is HydraulicCalibrationValue))
+			{
+				worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, new CalibrationException(Error.MEASURING_ERROR)));
+				return;
+			}
+
+			HydraulicCalibrationValue value1 = data1.Data as HydraulicCalibrationValue;
+			volumestrom = value1.VolumeFlow;
+			differenzdruck = value1.PressureDifference;
+
+#endif
+
+			Trace.WriteLine(string.Format("Alle Ventile geschlossen."));
+			Trace.WriteLine(string.Format("Volumenstrom: {0}, Differenzdruck: {1}", volumestrom, differenzdruck));
+
+			//TODO Fehler erzeugen wenn Volumenstrom > 100
+
+			Trace.WriteLine(string.Format("Anzahl Ventile: {0}", ventile));
+			Trace.WriteLine(string.Format("Anzahl Messungen: {0}", messungen));
+			Trace.WriteLine("");
+
+			// Die Ventile für jede Messung einstellen
+			for (int messung = 0; messung < messungen; messung++)
+			{
+				bool[] ventilstatus = new bool[ventile];
+
+				Messung daten = new Messung(messung);
+				daten.VentilStatus = ventilstatus;
+
+				messdaten.Add(daten);
+
+				Trace.Write(string.Format("Messung {0}\t:  ", messung + 1));
+
+				bool neuesVentil = (messung - messungBeiVentilwechsel) == (ventile - aktuellesVentil);
+
+				if (neuesVentil)
+				{
+					messungBeiVentilwechsel = messung;
+					aktuellesVentil++;
+				}
+
+				for (int ventil = 0; ventil < ventile; ventil++)
+				{
+					// Alle Ventile < aktuelles Ventil werden geschlossen
+					if (ventil < aktuellesVentil)
+					{
+						Trace.Write("0  ");
+						ventilstatus[ventil] = false;
+						(valves[ventil] as Valve).Command = VALVE_COMMAND.CLOSE;
+					}
+					// Das aktuelle Ventil immer öffnen
+					else if (ventil == aktuellesVentil)
+					{
+						Trace.Write("1  ");
+						ventilstatus[ventil] = true;
+						(valves[ventil] as Valve).Command = VALVE_COMMAND.OPEN;
+					}
+					// Berechnung, welches Ventil bei welcher Messung zusätzlich geöffnet wird
+					else if (ventil == messung - messungBeiVentilwechsel + aktuellesVentil)
+					{
+						Trace.Write("1  ");
+						ventilstatus[ventil] = true;
+						(valves[ventil] as Valve).Command = VALVE_COMMAND.OPEN;
+					}
+					// Alle anderen ventile werden geschlossen
+					else
+					{
+						Trace.Write("0  ");
+						ventilstatus[ventil] = false;
+						(valves[ventil] as Valve).Command = VALVE_COMMAND.CLOSE;
+					}
+
+                    //TODO raus geht so nicht, erste bei Close darf das Bit gesetzt werden
+                    //Ist es bereits die letzte Messung dann den Poweroff noch hinzufügen
+                   /* if (messung + 1 == messungen)
+                    {
+                        Trace.WriteLine(string.Format("Letzte Messung bei {0}", (valves[ventil] as Valve).ValveID));
+                        (valves[ventil] as Valve).Power_off = true;
+                        //TODO raus 
+                        //(valves[ventil] as Valve).Power = VALVE_POWER.POWER_OFF;
+                    }*/
+                }
+
+				if (worker.CancellationPending)
+					break;
+
+				// Den Status aktualisieren
+				currentStep++;
+				percent = currentStep * 100 / steps;
+				worker.ReportProgress(percent, new CalibrationStateObject(State.PROGRESS, percent));
+
+#if !Demo || KP
+				//Warten auf die Ventileinstellungen
+				DateTime startTime = System.DateTime.Now;
+				bool resultOK = true;
+
+				do
+				{
+					resultOK = true;
+
+					foreach (Valve valve in valves)
+					{
+						resultOK &= valve.Command == VALVE_COMMAND.OPEN ? valve.Value == 100 : valve.Value == 0;
+
+						if (!valve.KommunikationOK)
+							valve.CommErrorCounter++;
+
+						if (valve.CommErrorCounter >= allowedErrors)
+						{
+							valve.CommErrorCounter = 0;
+							worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, new CalibrationException(Error.VALVE_COMMUNICATION_FAILED, String.Format("Die Kommunikation mit dem Ventil {0:X} wurde unterbrochen", valve.ValveID))));
+							return;
+						}
+						else if (!valve.KommunikationOK)
+						{
+							valve.dateTimeReceived = DateTime.Now;
+							valve.kommunikationOK = true;
+						}
+					}
+
+					Thread.Sleep(100);
+				}
+				while (!resultOK && startTime.AddMilliseconds(timeout).Ticks > System.DateTime.Now.Ticks && !worker.CancellationPending);
+
+				if (worker.CancellationPending)
+					break;
+
+				if (!resultOK)
+				{
+					worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, new CalibrationException(Error.VALVE_NOT_RESPONDING, String.Format("Eines der Ventile reagierte nicht innerhalb von {0} Millisekunden", timeout))));
+					return;
+				}
+#endif
+
+				// Den Status aktualisieren
+				currentStep++;
+				percent = currentStep * 100 / steps;
+				worker.ReportProgress(percent, new CalibrationStateObject(State.PROGRESS, percent));
+
+				// Volumenstrom und Differenzdruck messen
+				// Fünf Sekunden warten bevor die Messung durchgeführt wird
+				//Thread.Sleep(5000);
+
+				if (worker.CancellationPending)
+					break;
+
+#if Demo || KP
+
+				volumestrom = (ushort)random.Next(1000);
+				differenzdruck = (ushort)random.Next(1000);
+				Thread.Sleep(100);
+
+#else
+
+				communication.StartComProcess(CustomAppId.HydraulicCalibration);
+				ICommRequestDataResult data = communication.GetComData(CustomAppId.HydraulicCalibration);
+				communication.StartComProcess(CustomAppId.HydraulicCalibration);
+
+				if (data.Data == null || !(data.Data is HydraulicCalibrationValue))
+				{
+					worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, new CalibrationException(Error.MEASURING_ERROR)));
+					return;
+				}
+
+				HydraulicCalibrationValue value = data.Data as HydraulicCalibrationValue;
+
+				volumestrom = value.VolumeFlow;
+				differenzdruck = value.PressureDifference;
+
+#endif
+
+				messwerte[messung] = volumestrom;
+				messwerte[messung + messungen] = differenzdruck;
+
+				daten.Volumenstrom = volumestrom;
+				daten.Differenzdruck = differenzdruck;
+				daten.DateTime = DateTime.Now;
+
+				Trace.WriteLine(string.Format("V {0}\tdP {1}\t{2}", messwerte[messung], messwerte[messung + messungen], DateTime.Now));
+
+				currentStep++;
+				percent = currentStep * 100 / steps;
+				worker.ReportProgress(percent, new CalibrationStateObject(State.PROGRESS, percent));
+			}
+
+			Trace.WriteLine("");
+
+			if (worker.CancellationPending)
+			{
+				foreach (Valve valve in valves)
+					valve.Command = VALVE_COMMAND.CLOSE;
+
+				worker.ReportProgress(percent, new CalibrationStateObject(State.CANCELED, null));
+				return;
+			}
+
+			CalibrationResult result = null;
+
+			// Voreinstellungen usw. berechnen
+			List<Valve> newValves = valves.ConvertAll<Valve>(delegate(IValve valve) { return valve as Valve; });
+
+			try
+			{
+				result = Algorithmus.abgleich(newValves, messwerte);
+			}
+			catch (CalibrationException e)
+			{
+				worker.ReportProgress(percent, new CalibrationStateObject(State.ERROR, e));
+				Thread.Sleep(5000);
+				return;
+			}
+
+			result.messungen = messdaten;
+			result.ventile = valves;
+
+			// Den Status aktualisieren
+			currentStep++;
+			percent = currentStep * 100 / steps;
+			worker.ReportProgress(percent, new CalibrationStateObject(State.PROGRESS, percent));
+
+			// Das Sleep, da es wohl Probleme gibt, wenn Events zu schnell hintereinander erfolgen.
+			Thread.Sleep(1000);
+			worker.ReportProgress(percent, new CalibrationStateObject(State.COMPLETED, result));
+			Console.WriteLine("Ende");
+		}
+
+		private void calibrationProgressChanged(object sender, ProgressChangedEventArgs e)
+		{
+			if (calibrationStateChanged != null)
+				calibrationStateChanged(e.UserState as CalibrationStateObject);
+		}
+
+		public void stop()
+		{
+			if (worker != null && worker.IsBusy)
+				worker.CancelAsync();
+		}
+
+		public List<IValve> getLearnedValves()
+		{
+			List<IValve> copiedValves;
+
+			valvesLock.AcquireReaderLock(-1);
+			copiedValves = new List<IValve>(valves.ToArray());
+			valvesLock.ReleaseReaderLock();
+
+			return copiedValves;
+		}
+
+		#endregion ICalibrate
+	}
+}

@@ -1,0 +1,266 @@
+﻿
+using System.ComponentModel;
+using FlowCalibrationInterface;
+using System;
+
+namespace FlowCalibration
+{
+    internal enum VALVE_COMMAND
+    {
+        CLOSE,
+        OPEN
+    }
+
+    //TODO raus
+
+    /*  internal enum VALVE_POWER
+    {
+        //glaube boolean wäre besser
+        POWER_ON, POWER_OFF
+    }*/
+
+    internal class Valve : IValve
+    {
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		internal bool Learned { get; set; }
+		internal VALVE_COMMAND Command { get; set; }
+
+        //TODO raus
+        //internal VALVE_POWER Power { get; set; }
+		internal int FunctionID { get; set; }
+
+		internal double[] Voreinstellungen_vdi { get; set; }
+		internal double[] Schrittweite_vdi { get; set; }
+		internal double[] Xp_vdi { get; set; }
+		internal double[] Kv_vdi { get; set; }
+		internal double[] Kvs_vdi { get; set; }
+		internal DateTime dateTimeReceived;
+		internal int CommErrorCounter { get; set; }
+		internal bool kommunikationOK;
+		internal byte travel = 40;
+
+        private int value;
+        private double temperature;
+        private double druckverlust;
+        private double voreinstellung;
+        private bool battery;
+        private int signal;
+        private string manufacturer;
+        private string tga;
+        private double desiredVolumeFlow;
+
+		//TODO neu nach einigen hin und her doch der boolean
+        internal bool power_off = false;
+        //TODO neu mal gucken ob das so bleibt; soll in sendAnswer gesetzt werden wenn power_off = true ist.
+		internal bool power_off_transmitted = false;
+
+        public long ValveID { get; private set; }
+
+        public Valve(long valveID)
+        {
+            this.ValveID = valveID;
+        }
+
+        public Valve(long valveID, int signal, bool battery, double temperature, int value)
+        {
+            this.ValveID = valveID;
+            this.signal = signal;
+            this.battery = battery;
+            this.temperature = temperature;
+            this.value = value;
+        }
+
+        protected void OnPropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+
+        public int Value
+        {
+            get
+            {
+                return value;
+            }
+
+            internal set
+            {
+				bool changed = this.value != value;
+                this.value = value;
+
+				if(changed)
+					OnPropertyChanged("Value");
+            }
+        }
+
+        public double Temperature
+        {
+            get
+            {
+                return temperature;
+            }
+
+            internal set
+            {
+				bool changed = this.temperature != value;
+                this.temperature = value;
+
+				if (changed)
+					OnPropertyChanged("Temperature");
+            }
+        }
+
+        public double Druckverlust
+        {
+            get
+            {
+                return druckverlust;
+            }
+
+            internal set
+            {
+				bool changed = this.druckverlust != value;
+				this.druckverlust = value;
+
+				if (changed)
+					OnPropertyChanged("DP_Ventil");
+            }
+        }
+
+        public double Voreinstellung
+        {
+            get
+            {
+                return voreinstellung;
+            }
+
+            internal set
+            {
+				bool changed = this.voreinstellung != value;
+				this.voreinstellung = value;
+
+				if (changed)
+					OnPropertyChanged("Voreinstellung");
+            }
+        }
+
+        public bool Battery
+        {
+            get
+            {
+                return battery;
+            }
+
+            internal set
+            {
+				bool changed = this.battery != value;
+				this.battery = value;
+
+				if (changed)
+					OnPropertyChanged("Battery");
+            }
+        }
+
+        public int Signal
+        {
+            get
+            {
+                return signal;
+            }
+
+            internal set
+            {
+				bool changed = this.signal != value;
+				signal = value;
+
+				if (changed)
+					OnPropertyChanged("Signal");
+            }
+        }
+
+        public string Manufacturer
+        {
+            get
+            {
+                return manufacturer;
+            }
+
+            set
+            {
+				bool changed = false;
+
+				if (manufacturer != null && value != null)
+					changed = (this.manufacturer == null && value != null) || (value == null && this.manufacturer != null) || !this.manufacturer.Equals(value);
+
+				manufacturer = value;
+
+				if (changed)
+					OnPropertyChanged("Manufacturer");
+            }
+        }
+
+        public string TGA
+        {
+            get
+            {
+                return tga;
+            }
+
+            set
+            {
+				bool changed = false;
+
+				if (tga != null && value != null)
+					changed = (this.tga == null && value != null) || (value == null && this.tga != null) || !this.tga.Equals(value);
+
+				tga = value;
+
+				if (changed)
+					OnPropertyChanged("TGA");
+            }
+        }
+
+        public double DesiredVolumeFlow
+        {
+            get
+            {
+                return desiredVolumeFlow;
+            }
+
+            set
+            {
+				bool changed = this.desiredVolumeFlow != value;
+				this.desiredVolumeFlow = value;
+
+				if (changed)
+					OnPropertyChanged("DesiredVolumeFlow");
+            }
+        }
+
+		public bool KommunikationOK
+		{
+			get
+			{
+				return kommunikationOK;
+			}
+
+			internal set
+			{
+				bool changed = this.kommunikationOK != value;
+				this.kommunikationOK = value;
+
+				if (changed)
+					OnPropertyChanged("KommunikationOK");
+			}
+		}
+
+		public double Hub
+		{
+			get
+			{
+				return travel / 10;
+			}
+		}
+    }
+}

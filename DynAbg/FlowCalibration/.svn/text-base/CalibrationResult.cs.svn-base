@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using FlowCalibration;
+using FlowCalibrationInterface;
+
+namespace FlowCalibration
+{
+	internal class CalibrationResult : ICalibrationResult
+	{
+		private ushort restförderhöhe;
+		private byte maxPumpendrehzahl;
+		internal List<IMessung> messungen;
+		internal List<IValve> ventile;
+		private string outputLog;
+		private string errorLog;
+
+		#region Properties
+
+		public int Restförderhöhe 
+		{
+			get
+			{
+				return restförderhöhe;
+			}
+		}
+
+		public int MaxPumpendrehzahl
+		{
+			get
+			{
+				return maxPumpendrehzahl;
+			}
+		}
+
+		public List<IMessung> Messungen
+		{
+			get
+			{
+				return messungen;
+			}
+		}
+		
+		public List<IValve> Ventile
+		{
+			get
+			{
+				return ventile;
+			}
+		}
+
+		public string OutputLog
+		{
+			get
+			{
+				return outputLog;
+			}
+		}
+
+		public string ErrorLog
+		{
+			get
+			{
+				return errorLog;
+			}
+		}
+
+		#endregion Properties
+
+		public CalibrationResult(ushort restförderhöhe, byte maxPumpendrehzahl, string outputLog = null, string errorLog = null)
+		{
+			this.restförderhöhe = restförderhöhe;
+			this.maxPumpendrehzahl = maxPumpendrehzahl;
+			this.outputLog = outputLog;
+			this.errorLog = errorLog;
+		}
+	}
+}

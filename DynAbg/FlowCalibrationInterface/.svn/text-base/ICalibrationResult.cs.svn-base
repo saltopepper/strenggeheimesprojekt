@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace FlowCalibrationInterface
+{
+	public interface ICalibrationResult
+	{
+		/// <summary>
+		/// Gibt die berechnete Restförderhöhe an
+		/// </summary>
+		int Restförderhöhe { get; }
+
+		/// <summary>
+		/// Gibt die berechnete maximale Pumpendrehzahl an.
+		/// </summary>
+		int MaxPumpendrehzahl { get; }
+
+		/// <summary>
+		/// Gibt die Messtabelle, sortiert nach der Messnummer, an.
+		/// </summary>
+		List<IMessung> Messungen { get; }
+
+		/// <summary>
+		/// Gibt die Ventile an, die zur Messung genutzt wurden.
+		/// </summary>
+		List<IValve> Ventile { get; }
+
+		/// <summary>
+		/// Gibt die Ausgaben vom Algorithmus zurück
+		/// </summary>
+		string OutputLog { get; }
+
+		/// <summary>
+		/// Gibt die Fehler vom Algorithmus zurück
+		/// </summary>
+		string ErrorLog { get; }
+	}
+}

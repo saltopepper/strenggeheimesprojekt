@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace FlowCalibrationInterface
+{
+	/// <summary>
+	/// Statusaufzählungen zum hydraulischen Abgleich.
+	/// </summary>
+	public enum State
+	{
+		/// <summary>
+		/// Der hydraulische Abgleich wurde abgebrochen.
+		/// </summary>
+		CANCELED,
+		/// <summary>
+		/// Der hydraulische Abgleich wurde abgeschlossen.
+		/// </summary>
+		COMPLETED,
+		/// <summary>
+		/// Der Vortschritt des hydraulischen Abgleichs hat sich verändert.
+		/// </summary>
+		PROGRESS,
+		/// <summary>
+		/// Während des hydraulischen Abgleichs trat ein Fehler auf.
+		/// </summary>
+		ERROR
+	}
+
+	/// <summary>
+	/// Aufzählungen von Fehlertypen.
+	/// </summary>
+	public enum Error
+	{
+		/// <summary>
+		/// Ein unbekannter Fehler ist aufgetreten. Nähere Informationen enthält die InnerException.
+		/// </summary>
+		UNKNOWN,
+		/// <summary>
+		/// Es wurde kein EnOcean-Empfänger gefunden.
+		/// </summary>
+		NO_TCM_FOUND,
+		/// <summary>
+		/// Es wurden kein Anlerntelegramm vom Ventil empfangen.
+		/// </summary>
+		NO_LEARN_MESSAGE,
+		/// <summary>
+		/// Es wurden bereits 128 Ventile angelernt.
+		/// </summary>
+		NO_FREE_IDS,
+		/// <summary>
+		/// Es ist ein Fehler in der Kommunikation mit dem EnOcean-Empfänger aufgetreten.
+		/// </summary>
+		TCM,
+		/// <summary>
+		/// Die Klasse mit der Schittstelle ICalibration wurde nicht initialisiert. Bitte mit der Methode init() initialisieren.
+		/// </summary>
+		NOT_INITIALIZED,
+		/// <summary>
+		/// Die Bibliothek FlowCalibration.dll wurde nicht gefunden oder konnte nicht geladen werden.
+		/// </summary>
+		LIB_NOT_FOUND,
+		/// <summary>
+		/// Die Voreinstellungen zur angegebenen TGA-Nummer konnten nicht gefunden werden.
+		/// </summary>
+		VALVE_SETTINGS_NOT_FOUND,
+		/// <summary>
+		/// Es wurde ein Ventilobjekt an eine Methode übergeben, welches nicht mit der
+		/// Methode anlernen() der Schnittstelle ICalibration erzeugt wurde.
+		/// </summary>
+		UNKNOWN_VALVE_OBJECT,
+		/// <summary>
+		/// Es wurde versucht ein Ventil anzulernen, welches bereits angelernt wurde.
+		/// </summary>
+		VALVE_ALREADY_LEARNED,
+		/// <summary>
+		/// Ein Ventil reagierte nicht auf ein Kommando.
+		/// </summary>
+		VALVE_NOT_RESPONDING,
+		/// <summary>
+		/// Die TGA-Nummer die einem Ventil zugewiesen wurde befindet sich nicht in der Datenbank.
+		/// </summary>
+		TGA_NOT_IN_DATABASE,
+		/// <summary>
+		/// Beim Messen des Volumenstroms bzw. des Differenzdrucks ist ein Fehler aufgetreten.
+		/// </summary>
+		MEASURING_ERROR,
+		/// <summary>
+		/// Interner Programmfehler.
+		/// </summary>
+		INTERNAL_ERROR,
+		/// <summary>
+		/// Die Kommunikation zwischen Programm und dem Ventil ist zusmmengebrochen.
+		/// </summary>
+		VALVE_COMMUNICATION_FAILED
+	}
+}
